@@ -6,6 +6,5 @@ taskForm.addEventListener("onclick", function(e){
     e.preventDefault()
 })
 taskBtn.addEventListener("onclick", function(){
-    taskText = taskInput.textContent
-    alert(taskText)
+    alert(taskText.value)
 })
