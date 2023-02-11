@@ -11,12 +11,16 @@ taskBtn.addEventListener("onclick", function(){
     addNewTask()
 })
 function addNewTask(){
-    const newP = document.createElement("p")
-    newP.textContent = taskInput.value
+    const newTh = document.createElement("th")
+    newTh.setAttribute("scope", "row")
+    const newTd = document.createElement("td")
+    newTd.textContent = taskInput
     const newBtn = document.createElement("button")
-    newBtn.textContent = "-"
-    const newLi = document.createElement("li")
-    newLi.appendChild(newP)
-    newLi.apenndChild(newBtn)
-    taskList.appendChild(newLi)
+    newBtn.setAttribute("type","button")
+    newBtn.textContent = "+"
+    newBtn.classList.add("btn")
+    const newTr = document.createElement("tr")
+    taskList.appendChild(newTr)
+    newTr.appendChild(newTh)
+    newTr.appendChild(newLi)
 }
