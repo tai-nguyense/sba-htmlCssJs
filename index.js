@@ -11,8 +11,6 @@ taskBtn.addEventListener("onclick", function(){
     addNewTask()
 })
 function addNewTask(){
-    const newTh = document.createElement("th")
-    newTh.setAttribute("scope", "row")
     const newTd = document.createElement("td")
     newTd.textContent = taskInput
     const newBtn = document.createElement("button")
@@ -21,6 +19,6 @@ function addNewTask(){
     newBtn.classList.add("btn")
     const newTr = document.createElement("tr")
     taskList.appendChild(newTr)
-    newTr.appendChild(newTh)
-    newTr.appendChild(newLi)
+    newTr.appendChild(newTd)
+    newTr.appendChild(newBtn)
 }
