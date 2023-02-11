@@ -9,3 +9,7 @@ html{
 #welcome, #tasks, #wheel, #hooray{
     height: 100vh;
 }
+
+#wheel{
+    border-radius: 50%;
+}
