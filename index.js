@@ -3,8 +3,9 @@ const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 
 taskForm.addEventListener("onclick", function(e){
-    e.preventDefault();
+    e.preventDefault()
 })
 taskBtn.addEventListener("onclick", function(){
-    alert("clicked")
-});
+    taskText = taskInput.textContent
+    alert(taskText)
+})
