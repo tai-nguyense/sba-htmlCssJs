@@ -2,7 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 .content{
-    background-image: url("https://images.unsplash.com/photo-1605124062037-8ac7abf0cdb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+    background-image: url("https://images.unsplash.com/photo-1505673542670-a5e3ff5b14a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
     background-size: cover;
 }
 
