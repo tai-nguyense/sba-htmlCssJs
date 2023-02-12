@@ -3,7 +3,7 @@ const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
 
-taskBtn.addEventListener("onclick", function(){
+taskBtn.addEventListener("click", function(){
     taskBtn.style.backgroundColor = red;
     const newTd = document.createElement("td");
     newTd.textContent = taskInput;
