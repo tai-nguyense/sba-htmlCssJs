@@ -1,49 +1,164 @@
-body{
-    color:white;
+body {
+    color: white;
     scroll-behavior: smooth;
     font-family: 'Roboto Mono', monospace;
 }
-.content{
+
+.content {
     background-image: url("https://images.unsplash.com/photo-1605003179269-c446bb939f00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
     background-size: cover;
 }
 
-.btwnPages{
+.btwnPages {
     height: 10vh;
 }
 
-#welcome, #tasks, #wheel, #hooray{
+#welcome,
+#tasks,
+#wheel,
+#hooray {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#welcome>.col{
+.welcomeContainer {
     text-align: center;
     font-family: 'Kanit', sans-serif;
+    padding: 0 10px;
 }
 
-h1{
+h1 {
     font-size: 5rem;
 }
 
-p{
+p {
     font-size: 2rem;
 }
 
-.wheelContainer{
+#taskForm {
+    padding: 10% 0;
+}
+
+.taskContainer {
+    padding: 0 10%;
+}
+
+.inputContainer {
+    padding-right: 0;
+}
+
+.btnContainer {
+    padding: 0;
+}
+
+#taskInput {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#taskBtn {
+    border-width: 1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.taskDesc,
+.deleteBtn {
+    vertical-align: middle;
+    width: 100%;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: transparent;
+    color: #212529;
+    background-clip: padding-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.deleteBtn {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.wheelContainer {
     width: 500px;
     height: 500px;
     background-color: #f2b8c6;
     border-width: 2px;
     border-radius: 50%;
 }
-.wheelTasks{
+
+.wheelTasks {
     border-color: white;
 }
 
-#hooray{
+#hooray {
     font-family: 'Kanit', sans-serif;
     font-size: 10rem;
+}
+
+.bg-dark {
+    background-color: rgba(255, 193, 192, 0.1) !important;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    #hooray {
+        font-size: 5rem;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+    p {
+        font-size: 2rem;
+    }
+    #hooray {
+        font-size: 7rem;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+    h1 {
+        font-size: 5rem;
+    }
+    p {
+        font-size: 3rem;
+    }
+    #hooray {
+        font-size: 9rem;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 6rem;
+    }
+    p {
+        font-size: 4rem;
+    }
+    #hooray {
+        font-size: 11rem;
+    }
 }
