@@ -1,4 +1,5 @@
 body{
+    color:white;
     scroll-behavior: smooth;
 }
 .content{
@@ -21,11 +22,11 @@ body{
     text-align: center;
 }
 
-.row>h1{
+h1{
     font-size: 30px;
 }
 
-.row>p{
+p{
     font-size: 15px;
 }
 
