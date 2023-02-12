@@ -47,34 +47,32 @@
             </div>
         </div>
         <div id="tasks" class="row">
-            <div class="taskContainer">
-                <div class="col-5">
-                    <form id="taskForm" class="row">
-                        <div class="col-auto">
-                            <label for="formTitle" class="visually-hidden">Form Title</label>
-                            <input type="text" readonly class="form-control-plaintext" id="formTitle" value="Add a Task">
-                        </div>
-                        <div class="col-auto">
-                            <label for="taskInput" class="visually-hidden">Input Task</label>
-                            <input type="text" class="form-control" id="taskInput" placeholder="New Task">
-                        </div>
-                        <div class="col-auto">
-                            <button id="taskBtn" type="button" class="btn">+</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-5">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Tasks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <ul id="taskList"></ul>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="col-5">
+                <form id="taskForm" class="row">
+                    <div class="col-auto">
+                        <label for="formTitle" class="visually-hidden">Form Title</label>
+                        <input type="text" readonly class="form-control-plaintext" id="formTitle" value="Add a Task">
+                    </div>
+                    <div class="col-auto">
+                        <label for="taskInput" class="visually-hidden">Input Task</label>
+                        <input type="text" class="form-control" id="taskInput" placeholder="New Task">
+                    </div>
+                    <div class="col-auto">
+                        <button id="taskBtn" type="button" class="btn">+</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tasks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ul id="taskList"></ul>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div id="wheel" class="row">
