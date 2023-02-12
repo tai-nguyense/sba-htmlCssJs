@@ -2,10 +2,10 @@ const taskForm = document.querySelector("#taskForm");
 const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
-
+alert("test");
 taskForm.addEventListener("submit", function(e){
     e.preventDefault();
-}
+});
 taskBtn.addEventListener("click", function(){
     taskBtn.style.backgroundColor = red;
     const newTd = document.createElement("td");
