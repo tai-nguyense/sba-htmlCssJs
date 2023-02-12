@@ -3,10 +3,6 @@ const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
 
-
-taskForm.addEventListener("onclick", function(e){
-    e.preventDefault()
-})
 taskBtn.addEventListener("onclick", function(){
     addNewTask()
 })
