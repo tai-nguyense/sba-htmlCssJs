@@ -2,8 +2,8 @@ const taskForm = document.querySelector("#taskForm");
 const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
-alert("test");
 taskForm.addEventListener("submit", function(e){
+    alert("test");
     e.preventDefault();
 });
 taskBtn.addEventListener("click", function(){
