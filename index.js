@@ -2,14 +2,18 @@ const taskForm = document.querySelector("#taskForm");
 const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
-taskForm.addEventListener("submit", function(e){
+taskForm.addEventListener("submit", function(e) {
     e.preventDefault();
 });
-taskBtn.addEventListener("click", function(){
+taskBtn.addEventListener("click", function() {
+    taskText = taskInput.value.trim();
+    if (taskText.length < 1) {
+        return;
+    }
     const newTd = document.createElement("td");
     newTd.textContent = taskInput.value;
     const newBtn = document.createElement("button");
-    newBtn.setAttribute("type","button");
+    newBtn.setAttribute("type", "button");
     newBtn.textContent = "+";
     newBtn.classList.add("btn");
     const newTr = document.createElement("tr");
