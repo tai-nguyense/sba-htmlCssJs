@@ -21,6 +21,7 @@ body{
 
 #welcome>.col{
     text-align: center;
+    font-family: 'Kanit', sans-serif;
 }
 
 h1{
@@ -43,5 +44,6 @@ p{
 }
 
 #hooray{
+    font-family: 'Kanit', sans-serif;
     font-size: 10rem;
 }
