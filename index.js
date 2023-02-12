@@ -6,8 +6,6 @@ taskForm.addEventListener("submit", function(e){
     e.preventDefault();
 });
 taskBtn.addEventListener("click", function(){
-    alert("test");
-    taskBtn.style.backgroundColor = red;
     const newTd = document.createElement("td");
     newTd.textContent = taskInput.value;
     const newBtn = document.createElement("button");
