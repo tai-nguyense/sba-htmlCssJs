@@ -6,8 +6,12 @@ taskForm.addEventListener("submit", function(e){
     e.preventDefault();
 });
 taskBtn.addEventListener("click", function(){
+    taskText = taskInput.value.trim()
+    if(taskText = ""){
+        return;
+    }
     const newTd = document.createElement("td");
-    newTd.textContent = taskInput.value;
+    newTd.textContent = taskText;
     const newBtn = document.createElement("button");
     newBtn.setAttribute("type","button");
     newBtn.textContent = "+";
