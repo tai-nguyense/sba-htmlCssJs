@@ -8,8 +8,8 @@ taskForm.addEventListener("submit", function(e){
     e.preventDefault();
 });
 taskBtn.addEventListener("click", function(){
-    taskText = taskInput.value.trim()
-    if(taskText.length===0){
+    taskText = taskInput.value.trim();
+    if(taskText === ""){
         return;
     }
     const newTd = document.createElement("td");
