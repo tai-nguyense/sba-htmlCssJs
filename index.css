@@ -32,6 +32,10 @@ p{
     font-size: 2rem;
 }
 
+tbody{
+    background-color: rgba(255,192,203,.5)
+}
+
 .wheelContainer{
     width: 500px;
     height: 500px;
