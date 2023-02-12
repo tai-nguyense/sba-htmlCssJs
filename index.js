@@ -3,10 +3,13 @@ const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
 
+taskForm.addEventListener("submit", function(e){
+    e.preventDefault();
+}
 taskBtn.addEventListener("click", function(){
     taskBtn.style.backgroundColor = red;
     const newTd = document.createElement("td");
-    newTd.textContent = taskInput;
+    newTd.textContent = taskInput.value;
     const newBtn = document.createElement("button");
     newBtn.setAttribute("type","button");
     newBtn.textContent = "+";
@@ -15,4 +18,5 @@ taskBtn.addEventListener("click", function(){
     taskList.appendChild(newTr);
     newTr.appendChild(newTd);
     newTr.appendChild(newBtn);
+    taskInput.value = "";
 });
