@@ -21,11 +21,11 @@ body{
     text-align: center;
 }
 
-h1{
+.row>h1{
     font-size: 30px;
 }
 
-p{
+.row>p{
     font-size: 15px;
 }
 
