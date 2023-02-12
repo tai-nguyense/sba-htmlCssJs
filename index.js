@@ -3,10 +3,10 @@ const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
 taskForm.addEventListener("submit", function(e){
-    alert("test");
     e.preventDefault();
 });
 taskBtn.addEventListener("click", function(){
+    alert("test");
     taskBtn.style.backgroundColor = red;
     const newTd = document.createElement("td");
     newTd.textContent = taskInput.value;
