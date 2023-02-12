@@ -11,6 +11,7 @@ taskBtn.addEventListener("onclick", function(){
     addNewTask()
 })
 function addNewTask(){
+    taskBtn.style.backgroundColor = red;
     const newTd = document.createElement("td")
     newTd.textContent = taskInput
     const newBtn = document.createElement("button")
