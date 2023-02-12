@@ -4,9 +4,6 @@ const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
 
 taskBtn.addEventListener("onclick", function(){
-    addNewTask()
-})
-function addNewTask(){
     taskBtn.style.backgroundColor = red;
     const newTd = document.createElement("td")
     newTd.textContent = taskInput
@@ -18,4 +15,4 @@ function addNewTask(){
     taskList.appendChild(newTr)
     newTr.appendChild(newTd)
     newTr.appendChild(newBtn)
-}
+})
