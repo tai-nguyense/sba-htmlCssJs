@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wheel of Tasks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
@@ -60,7 +61,8 @@
             <div class="col taskContainer">
                 <div class="row">
                     <div class="col-12 col-md-5">
-                        <form id="taskForm" class="row">
+                        <form id="taskForm" class="row"><label for="taskLabel" class="col-form-label">Enter up to 10
+                                tasks</label>
                             <div class="col-10 inputContainer">
                                 <label for="taskInput" class="visually-hidden">Input Task</label>
                                 <input type="text" class="form-control" id="taskInput" placeholder="Add a new Task">
@@ -91,18 +93,6 @@
                 Press to Reload Wheel
             </button>
             <div class="wheelContainer">
-                <div class="wheelTask">
-                    task 1
-                </div>
-                <div class="wheelTask">
-                    task 2
-                </div>
-                <div class="wheelTask">
-                    task 3
-                </div>
-                <div class="wheelTask">
-                    task 4
-                </div>
             </div>
             <button id="wheelSpinnerBtn">
                 SPIN
