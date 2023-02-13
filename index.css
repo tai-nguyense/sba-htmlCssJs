@@ -1,37 +1,120 @@
-body{
-    color:white;
+body {
+    color: rgba(255, 243, 243, 0.897);
     scroll-behavior: smooth;
     font-family: 'Roboto Mono', monospace;
 }
-.content{
+
+.content {
     background-image: url("https://images.unsplash.com/photo-1605003179269-c446bb939f00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
     background-size: cover;
 }
 
-.btwnPages{
+.btwnPages {
     height: 10vh;
 }
 
-#welcome, #tasks, #wheel, #hooray{
+.navbar {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 243, 243, 0.897)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --bs-navbar-toggler-border-color: rgba(255, 243, 243, 0.897);
+    --bs-navbar-toggler-border-radius: 0.375rem;
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.navbar-toggler:hover {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+#welcome,
+#tasks,
+#wheel,
+#hooray {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#welcome>.col{
+.welcomeContainer {
     text-align: center;
+    font-family: 'Kanit', sans-serif;
+    padding: 0 10%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.hoorayContainer {
+    text-align: center;
+    font-size: 4.5rem;
     font-family: 'Kanit', sans-serif;
 }
 
-h1{
-    font-size: 5rem;
+#taskForm {
+    padding: 10% 0;
 }
 
-p{
+.taskContainer {
+    padding: 0 10%;
+}
+
+.inputContainer,
+.btnContainer {
+    padding: 0;
+}
+
+#taskInput {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn {
+    width: 100%;
+    padding: 0;
+}
+
+#taskBtn {
+    border-width: 1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+th {
+    text-align: center;
     font-size: 2rem;
+    color: rgba(255, 243, 243, 0.897);
 }
 
+<<<<<<< HEAD
 tbody{
     background-color: rgba(255,192,203,.5)
 }
@@ -41,15 +124,62 @@ tbody{
 .wheelContainer{
     width: 500px;
     height: 500px;
+=======
+.deleteBtn {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.wheelContainer {
+    width: 300px;
+    height: 300px;
+>>>>>>> fix-table-js
     background-color: #f2b8c6;
     border-width: 2px;
     border-radius: 50%;
 }
-.wheelTasks{
+
+.wheelTasks {
     border-color: white;
 }
 
-#hooray{
-    font-family: 'Kanit', sans-serif;
-    font-size: 10rem;
+.bg-dark {
+    background-color: rgba(255, 193, 192, 0.1) !important;
+}
+
+.filler {
+    height: 20vh;
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 5rem;
+    }
+    p {
+        font-size: 2.5rem;
+    }
+    .hoorayContainer {
+        font-size: 7.5rem;
+    }
+    .wheelContainer {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 7rem;
+    }
+    p {
+        font-size: 4rem;
+    }
+    .hoorayContainer {
+        font-size: 10rem;
+    }
+    .wheelContainer {
+        width: 500px;
+        height: 500px;
+    }
 }

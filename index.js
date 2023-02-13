@@ -2,31 +2,43 @@ const taskForm = document.querySelector("#taskForm");
 const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
-const allDeleteBtns = document.querySelector(".deleteBtn")
-
-taskForm.addEventListener("submit", function(e){
+taskForm.addEventListener("submit", function(e) {
     e.preventDefault();
+    addTask();
 });
-taskBtn.addEventListener("click", function(){
+taskBtn.addEventListener("click", function() {
+    addTask();
+});
+
+function addTask() {
     taskText = taskInput.value.trim();
-    if(taskText === ""){
+    if (taskText.length < 1) {
         return;
     }
     const newTd = document.createElement("td");
-    newTd.textContent = taskText;
+    newTd.classList.add("col-10")
+    const newP = document.createElement("span");
+    newP.textContent = taskInput.value;
+    const newTdBtn = document.createElement("td");
+    newTdBtn.classList.add("col-2")
     const newBtn = document.createElement("button");
-    newBtn.setAttribute("type","button");
+    newBtn.setAttribute("type", "button");
     newBtn.textContent = "-";
-    newBtn.classList.add("btn deleteBtn");
+    newBtn.classList.add("btn");
+    addDelete(newBtn);
     const newTr = document.createElement("tr");
+    newTr.classList.add("row");
     taskList.appendChild(newTr);
     newTr.appendChild(newTd);
-    newTr.appendChild(newBtn);
+    newTr.appendChild(newTdBtn);
+    newTd.appendChild(newP);
+    newTdBtn.appendChild(newBtn);
     taskInput.value = "";
-});
-for(const delBtn of allDeleteBtns){
-    delBtn.addEventListener("click", function(){
-        liToDel = delBtn.parentNode;
-        liToDel.parentNode.removeChild(liToDel);
+}
+
+function addDelete(delBtn) {
+    delBtn.addEventListener("click", function() {
+        const tr = delBtn.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
     })
 }
