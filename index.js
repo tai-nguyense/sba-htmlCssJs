@@ -2,6 +2,12 @@ const taskForm = document.querySelector("#taskForm");
 const taskBtn = document.querySelector("#taskBtn");
 const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
+const navToggler = document.querySelector(".navbar-toggler");
+const navIcon = document.querySelector(".nav-icon")
+
+navToggler.addEventListener("click", function() {
+    navIcon.classList.toggle("open");
+})
 taskForm.addEventListener("submit", function(e) {
     e.preventDefault();
     addTask();
