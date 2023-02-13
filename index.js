@@ -4,9 +4,10 @@ const taskInput = document.querySelector("#taskInput");
 const taskList = document.querySelector("#taskList");
 const navToggler = document.querySelector(".navbar-toggler");
 const navIcon = document.querySelector(".nav-icon");
-const refreshWheelBtn = document.querySelector("#refreshWheelBtn");
 const wheelSpinnerBtn = document.querySelector("#wheelSpinnerBtn");
 const wheelContainer = document.querySelector(".wheelContainer");
+const result = document.querySelector(".result");
+const hoorayContainer = document.querySelector(".hoorayContainer");
 
 const colorArray = [];
 colorArray.push("rgba(251, 248, 204, 1)",
@@ -54,8 +55,8 @@ function addTask() {
     const newTr = document.createElement("tr");
     newTr.classList.add("row");
     taskList.appendChild(newTr);
-    newTr.appendChild(newTd);
     newTr.appendChild(newTdBtn);
+    newTr.appendChild(newTd);
     newTd.appendChild(newP);
     newTdBtn.appendChild(newBtn);
     taskInput.value = "";
@@ -68,6 +69,7 @@ function addDelete(delBtn) {
     })
 }
 
+
 function getTaskArray() {
     var taskArray = [];
     $('.taskText').each(function() {
@@ -76,8 +78,18 @@ function getTaskArray() {
     return taskArray;
 }
 
-refreshWheelBtn.addEventListener("click", function() {
+wheelSpinnerBtn.addEventListener("click", function() {
     var taskArray = getTaskArray();
+    if (taskArray.length === 0) {
+        return;
+    }
+    if (taskArray.length < 10) {
+        var size = taskArray.length;
+        for (var i = size; i < 10; i++) {
+            var randTask = Math.floor(Math.random() * size);
+            taskArray.push(taskArray[randTask]);
+        }
+    }
     refreshWheel(taskArray);
 })
 
@@ -88,28 +100,69 @@ function refreshWheel(taskArray) {
         wheelTask = wheelContainer.lastElementChild;
     }
     if (taskArray.length === 0) {
+        alert("Please enter some tasks first");
         return;
     }
-    spinWheel();
+    spinWheel(taskArray);
     var counter = 0;
     $(taskArray).each(function() {
-        counter++;
         const newDiv = document.createElement("div");
         newDiv.classList.add("wheelTask");
-        newDiv.textContent = counter;
+        newDiv.textContent = taskArray[counter];
         var xDeg = 360 / taskArray.length;
-        newDiv.style.transform = "rotate(" + xDeg * counter + "deg)";
-        newDiv.style.backgroundColor = colorArray[counter - 1];
+        newDiv.style.transform = "rotate(" + xDeg * (counter + 1) + "deg)";
+        newDiv.style.backgroundColor = colorArray[counter];
         wheelContainer.append(newDiv);
+        counter++;
     })
 }
 
-wheelSpinnerBtn.addEventListener("click", function() {
-    spinWheel();
-})
 var randomDeg = 360 * 3 + Math.floor(Math.random() * 360 * 2);
 
-function spinWheel() {
+function spinWheel(taskArray) {
+    if (taskArray.length === 0) {
+        return;
+    }
     randomDeg += 360 * 3 + Math.floor(Math.random() * 360 * 2);
     wheelContainer.style.transform = "rotate(" + randomDeg + "deg)";
+    setTimeout(showTask(randomDeg, taskArray), 5000);
+}
+
+function showTask(randomDeg, taskArray) {
+    randomDeg = randomDeg % 360;
+    var resultTask = 0;
+    if (randomDeg >= 0 && randomDeg < 36) {
+        resultTask = taskArray[1];
+    } else if (randomDeg >= 36 && randomDeg < 72) {
+        resultTask = taskArray[0];
+    } else if (randomDeg >= 72 && randomDeg < 108) {
+        resultTask = taskArray[9];
+    } else if (randomDeg >= 108 && randomDeg < 144) {
+        resultTask = taskArray[8];
+    } else if (randomDeg >= 144 && randomDeg < 180) {
+        resultTask = taskArray[7];
+    } else if (randomDeg >= 180 && randomDeg < 216) {
+        resultTask = taskArray[6];
+    } else if (randomDeg >= 216 && randomDeg < 252) {
+        resultTask = taskArray[5];
+    } else if (randomDeg >= 252 && randomDeg < 288) {
+        resultTask = taskArray[4];
+    } else if (randomDeg >= 288 && randomDeg < 324) {
+        resultTask = taskArray[3];
+    } else if (randomDeg >= 324 && randomDeg < 360) {
+        resultTask = taskArray[2];
+    }
+    result.innerHTML = resultTask;
+}
+
+document.addEventListener("scroll", function() {
+    if (window.scrollY + window.innerHeight + 100 > document.body.scrollHeight) {
+        effect();
+    }
+})
+var hooRotate = 0;
+
+function effect() {
+    hooRotate += 720;
+    hoorayContainer.style.transform = "rotate(" + hooRotate + "deg)";
 }

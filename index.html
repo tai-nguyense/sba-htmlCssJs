@@ -61,7 +61,8 @@
             <div class="col taskContainer">
                 <div class="row">
                     <div class="col-12 col-md-5">
-                        <form id="taskForm" class="row"><label for="taskLabel" class="col-form-label">Enter up to 10
+                        <form id="taskForm" class="row">
+                            <label for="taskLabel" class="col-form-label">Enter up to 10
                                 tasks:</label>
                             <div class="col-10 inputContainer">
                                 <label for="taskInput" class="visually-hidden">Input Task</label>
@@ -89,14 +90,18 @@
         </div>
         <div class="row filler"></div>
         <div id="wheel" class="row">
-            <button id="refreshWheelBtn">
-                Press to Reload Wheel
-            </button>
-            <div class="wheelContainer">
+            <div class="col-6 displayWheel">
+                <div class="wheelContainer">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row resultTitle">Your task is:</div>
+                <div class="row result"></div>
             </div>
             <button id="wheelSpinnerBtn">
                 SPIN
             </button>
+            <div class="instructions">Press SPIN to refresh the Wheel</div>
             <div class="pointer"></div>
         </div>
         <div class="row filler"></div>

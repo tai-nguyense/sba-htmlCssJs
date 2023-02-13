@@ -2,6 +2,7 @@ body {
     color: rgba(255, 243, 243, 0.897);
     scroll-behavior: smooth;
     font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
 }
 
 .example::-webkit-scrollbar {
@@ -97,11 +98,13 @@ p {
     text-align: center;
     font-size: 4.5rem;
     font-family: 'Kanit', sans-serif;
+    transition: .2s;
 }
 
 .taskContainer {
     padding: 0 10%;
     margin-bottom: 20px;
+    vertical-align: middle;
 }
 
 .inputContainer,
@@ -148,23 +151,13 @@ td {
     height: 100%;
 }
 
-#refreshWheelBtn {
-    width: 200px;
-    height: 70px;
-    border-radius: 10px;
-    background-color: #f2b8c6;
-    color: white;
-    position: absolute;
-    transform: translateY(-250px);
-}
-
 .pointer {
     position: absolute;
     width: 30px;
     height: 30px;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
-    background-color: #ffa0b6;
-    transform: translateY(-200px);
+    background-color: #ffdce4;
+    transform: translateX(-100px) rotate(90deg);
 }
 
 #wheelSpinnerBtn {
@@ -172,20 +165,41 @@ td {
     height: 70px;
     border-radius: 50%;
     position: absolute;
+    transform: translateX(-310px);
     background-color: #ffa0b6;
     color: white;
+}
+
+.instructions {
+    position: absolute;
+    transform: translateX(300px) translateY(-230px);
 }
 
 .wheelContainer {
     width: 400px;
     height: 400px;
     clip-path: circle(50%);
-    background-color: #f2b8c6;
+    background: conic-gradient(rgba(251, 248, 204, .5), rgba(241, 192, 232, .5), rgba(142, 236, 245, .5), rgba(185, 251, 192, .5), rgba(251, 248, 204, .5));
     border-width: 2px;
     border-radius: 50%;
     padding: 0%;
     transition: .5s ease-in-out;
-    margin: auto;
+}
+
+#wheel {
+    padding: 0 10%;
+}
+
+.displayWheel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultTitle,
+.result {
+    font-size: 2rem;
+    color: rgba(255, 243, 243, 1);
 }
 
 .wheelTask>p {
@@ -203,10 +217,11 @@ td {
     transform-origin: bottom;
     text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
+    font-size: 2rem;
     left: 34%;
-    color: black;
+    color: rgba(255, 243, 243, 1);
+    text-shadow: black 1px 0 1px;
 }
 
 .bg-dark {
