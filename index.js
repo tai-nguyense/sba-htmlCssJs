@@ -8,6 +8,17 @@ const refreshWheelBtn = document.querySelector("#refreshWheelBtn");
 const wheelSpinnerBtn = document.querySelector("#wheelSpinnerBtn");
 const wheelContainer = document.querySelector(".wheelContainer");
 
+const colorArray = [];
+colorArray.push("rgba(251, 248, 204, 1)",
+    "rgba(253, 228, 207, 1)",
+    "rgba(255, 207, 210, 1)",
+    "rgba(241, 192, 232, 1)",
+    "rgba(207, 186, 240, 1)",
+    "rgba(163, 196, 243, 1)",
+    "rgba(144, 219, 244, 1)",
+    "rgba(142, 236, 245, 1)",
+    "rgba(152, 245, 225, 1)",
+    "rgba(185, 251, 192, 1))");
 navToggler.addEventListener("click", function() {
     navIcon.classList.toggle("open");
 })
@@ -79,8 +90,8 @@ function refreshWheel(taskArray) {
     if (taskArray.length === 0) {
         return;
     }
-    var counter = 0;
     spinWheel();
+    var counter = 0;
     $(taskArray).each(function() {
         counter++;
         const newDiv = document.createElement("div");
@@ -88,6 +99,7 @@ function refreshWheel(taskArray) {
         newDiv.textContent = counter;
         var xDeg = 360 / taskArray.length;
         newDiv.style.transform = "rotate(" + xDeg * counter + "deg)";
+        newDiv.style.backgroundColor = colorArray[counter - 1];
         wheelContainer.append(newDiv);
     })
 }

@@ -177,9 +177,9 @@ td {
 }
 
 .wheelContainer {
-    width: 200px;
+    width: 400px;
+    height: 400px;
     clip-path: circle(50%);
-    height: 300px;
     background-color: #f2b8c6;
     border-width: 2px;
     border-radius: 50%;
@@ -196,14 +196,16 @@ td {
 }
 
 .wheelTask {
-    width: 400px;
-    height: 205px;
+    height: 200px;
+    width: 130px;
+    position: absolute;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
+    transform-origin: bottom;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    transform-origin: bottom;
+    left: 34%;
     color: black;
 }
 
@@ -225,10 +227,6 @@ td {
     .hoorayContainer {
         font-size: 7.5rem;
     }
-    .wheelContainer {
-        width: 400px;
-        height: 400px;
-    }
 }
 
 @media (min-width: 992px) {
@@ -240,9 +238,5 @@ td {
     }
     .hoorayContainer {
         font-size: 10rem;
-    }
-    .wheelContainer {
-        width: 500px;
-        height: 500px;
     }
 }
