@@ -31,6 +31,7 @@ function addTask() {
     newBtn.setAttribute("type", "button");
     newBtn.textContent = "-";
     newBtn.classList.add("btn");
+    newBtn.style.color = "rgba(255, 243, 243, 0.897)";
     addDelete(newBtn);
     const newTr = document.createElement("tr");
     newTr.classList.add("row");

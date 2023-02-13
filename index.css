@@ -141,6 +141,10 @@ th {
     color: rgba(255, 243, 243, 0.897);
 }
 
+td {
+    color: rgba(255, 243, 243, 0.897);
+}
+
 .deleteBtn {
     border: none;
     width: 100%;
